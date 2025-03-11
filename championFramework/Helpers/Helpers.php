@@ -54,12 +54,11 @@
         return $string;
     }
 
-    function jsonResponse(array $arrData, int $code){
-        if(is_array($arrData)){
-        header(header: "HTTP/1.1 $code");
-        header(header: "Content-Type: application/json");
-        echo json_encode($arrData, flags:true);
-    }
+    function jsonResponse(array $arrData, int $code) {
+        header("HTTP/1.1 $code");
+        header("Content-Type: application/json");
+        echo json_encode($arrData);
+        exit();
     }
 
     function testString(string $data){
