@@ -6,7 +6,7 @@
     //Datos de conexión a Base de Datos
 	const CONNECTION = true;
 	const DB_HOST = "localhost";
-	const DB_NAME = "db_sistema";
+	const DB_NAME = "api_proyecto";
 	const DB_USER = "root";
 	const DB_PASSWORD = "";
 	const DB_CHARSET = "utf8";

@@ -20,7 +20,7 @@
         return $format;
     }
 
-    //Elimina exceso de espacios entre palabras
+        //Elimina exceso de espacios entre palabras
     function strClean($strCadena){
         $string = preg_replace(['/\s+/','/^\s|\s$/'],[' ',''], $strCadena);
         $string = trim($string); //Elimina espacios en blanco al inicio y al final
@@ -55,11 +55,9 @@
     }
 
     function jsonResponse(array $arrData, int $code){
-        if(is_array($arrData)){
-        header(header: "HTTP/1.1 $code");
-        header(header: "Content-Type: application/json");
-        echo json_encode($arrData, flags:true);
-    }
+        header("HTTP/1.1 $code");
+        header("Content-Type: application/json");
+        echo json_encode($arrData);
     }
 
     function testString(string $data){
@@ -70,21 +68,21 @@
             return false;
         }
     }
-function testEntero($numero){
-    $re = '/[0-9]+$/m';
-    if(preg_match($re,$numero)){
-        return true;
-    }else{
-        return false;
+    function testEntero($numero){
+        $re = '/[0-9]+$/m';
+        if(preg_match($re,$numero)){
+            return true;
+        }else{
+            return false;
+        }
     }
-}
-function testEmail(string $email){
-    $re = '/[a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,3})$/m';
-    if(preg_match($re,$email)){
-        return true;
-    }else{
-        return false;
+    function testEmail(string $email){
+        $re = '/[a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,3})$/m';
+        if(preg_match($re,$email)){
+            return true;
+        }else{
+            return false;
+        }
     }
-}
 
 ?>
