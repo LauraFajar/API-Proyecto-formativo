@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+
+    <link rel="stylesheet" href="estilo/pagina1.csS">
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <header class="barra">
+        <h1>EPA</h1>
+    </header>
+
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+        <ul class="sidebar_list">
+
+
+            <li class="sidebar_element">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    class="sidebar__icon">
+                    <path
+                        d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 1 1 0 0 0-.26-.68z">
+                    </path>
+                </svg>
+
+                <div class="sidebar__hide">
+                    <p class="sidebar__text">inicio</p>
+                </div>
+            </li>
+            
+
+            <li class="sidebar_element">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="sidebar__icon
+                    style=" fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                    <path
+                        d="M20 5h-8.586L9.707 3.293A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z">
+                    </path>
+                </svg>
+
+                <div class="sidebar__hide">
+                    <p class="sidebar__text" >fitosanitario </p>
+                </div>
+            </li>
+
+
+
+
+        </ul>
+    </aside>
+
+    <!-- Contenedor principal -->
+    <main class="contenedor">
+        <h1>Registro de Enfermedad</h1>
+        <br><br><br>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="enfermedad">Enfermedad:</label><br>
+            <br>
+            <input type="text" id="enfermedad" name="enfermedad"><br><br>
+            <label for="tipo">Tipo:</label>
+            <br><br>
+            <select id="tipo" name="tipo">
+                <option value="hospedante">enfermedad</option>
+                <option value="patogeno">Plaga</option>
+                <option value="ambiente">Arbense</option>
+            </select>
+            <br><br>
+            <button type="submit" name="registrar">buscar</button><br><br>
+            <br><br><br>
+    <div class="registrar-epa">
+        <p>¿Quieres registrar EPA?</p>
+        <button type="button" name="registrar-epa">Registrar</button>
+    </div>
+        </form>
+    </main>
+
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
